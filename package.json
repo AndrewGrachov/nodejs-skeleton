@@ -1,0 +1,12 @@
+{
+  "name": "node-skeleton",
+  "version": "0.0.0",
+  "skeletonVersion": "0.0.0",
+  "description": "Skeleton for SolidOpinion microservices",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SolidOpinion Team",
+  "license": "ISC"
+}
