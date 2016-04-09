@@ -1,6 +1,6 @@
 {
   "name": "node-skeleton",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "skeletonVersion": "0.0.0",
   "description": "Skeleton for SolidOpinion microservices",
   "main": "app.js",
