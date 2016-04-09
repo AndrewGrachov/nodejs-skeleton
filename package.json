@@ -8,5 +8,9 @@
     "test": "test"
   },
   "author": "SolidOpinion Team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.20.1",
+    "express": "^4.13.4"
+  }
 }
