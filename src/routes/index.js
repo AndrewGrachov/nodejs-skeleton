@@ -14,8 +14,6 @@ function loadRoutes(app) {
     }
   });
 }
-
-
 module.exports = {
   loadRoutes: loadRoutes
 };
