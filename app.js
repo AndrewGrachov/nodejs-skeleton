@@ -4,9 +4,19 @@ const express = require('express'),
   controllers = require('./src/controllers/controller');
 
 const app = express();
-const middleware = require('./src/middleware/middleware');
+const routes = require('./src/routes');
+const winston = require('winston');
 
-middleware(app);
-controllers(app);
+
 
 app.listen(config.app.port);
+
+
+routes.loadRoutes(app);
+
+const winstonStream = {
+  write: function(message, encoding){
+    winston.info(message);
+  }
+};
+app.use(express.logger({stream:winstonStream}));
