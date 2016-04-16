@@ -5,7 +5,7 @@
   "description": "Skeleton for SolidOpinion microservices",
   "main": "app.js",
   "scripts": {
-    "test": "istanbul cover _mocha"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha"
   },
   "author": "SolidOpinion Team",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "winston": "^2.2.0"
   },
   "devDependencies": {
+    "mocha": "^2.4.5",
     "mocha-eslint": "^2.0.2"
   }
 }
