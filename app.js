@@ -5,18 +5,10 @@ const express = require('express'),
 
 const app = express();
 const routes = require('./src/routes');
-const winston = require('winston');
-
 
 
 app.listen(config.app.port);
+console.log('Listening at:', config.app.port);
 
 
 routes.loadRoutes(app);
-
-const winstonStream = {
-  write: function(message, encoding){
-    winston.info(message);
-  }
-};
-app.use(express.logger({stream:winstonStream}));
