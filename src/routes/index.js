@@ -1,5 +1,6 @@
-const path = require('path');
-const fs = require('fs');
+'use strict';
+var path = require('path');
+var fs = require('fs');
 
 function loadRoutes(app) {
   fs.readdirSync(__dirname).map(file=>{
