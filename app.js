@@ -40,7 +40,7 @@ app.get('/error', function (req, res, next) {
   return next(new Error("This throws error"));
 });
 // Connection URL
-var url = 'mongodb://localhost:27017/advanced_node';
+var url = config.db.url;
 // Use connect method to connect to the Server
 MongoClient.connect(url, function(err, db) {
   if (err) {
