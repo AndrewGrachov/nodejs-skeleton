@@ -1,6 +1,8 @@
 'use strict';
 var opbeat;
-if (process.env.NODE_ENV === 'development') {
+process.env.NODE_ENV = process.env.NODE_ENV || 'default';
+
+if (['default', 'test'].indexOf(process.env.NODE_ENV) === -1) {
   opbeat = require('opbeat').start();
 }
 
@@ -41,6 +43,7 @@ app.get('/error', function (req, res, next) {
 });
 // Connection URL
 var url = config.db.url;
+console.log('url:', url);
 // Use connect method to connect to the Server
 MongoClient.connect(url, function(err, db) {
   if (err) {
